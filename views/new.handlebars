@@ -1,12 +1,77 @@
-<form action="/lists" method="POST">
-  <input type="text" placeholder="name" name="name">
-  <input type="text" placeholder="name_en" name="name_en">
-  <input type="text" placeholder="category" name="category">
-  <input type="text" placeholder="image" name="image">
-  <input type="text" placeholder="location" name="location">
-  <input type="text" placeholder="phone" name="phone">
-  <input type="text" placeholder="google_map" name="google_map">
-  <input type="number" placeholder="rating" name="rating">
-  <input type="text" placeholder="description" name="description">
-  <button type="submit">Create</button>
-</form>
+<div class="container">
+  <div class="card w-50 m-auto my-5">
+    <div class="card-body">
+      {{!-- form-start --}}
+      <form action="/lists" method="POST">
+        <div class="mb-3 row">
+          <label for="name" class="col-sm-3 col-form-label">餐廳名稱</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="" name="name">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="name_en" class="col-sm-3 col-form-label">餐廳英文名稱</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="" name="name_en">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="category" class="col-sm-3 col-form-label">類別</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="" name="category">
+          </div>
+        </div>
+
+
+        <div class="mb-3 row">
+          <label for="location" class="col-sm-3 col-form-label">地址</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="" name="location">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="google_map" class="col-sm-3 col-form-label">Google Map</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="" name="google_map">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="phone" class="col-sm-3 col-form-label">電話</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="" name="phone">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="rating" class="col-sm-3 col-form-label">評分</label>
+          <div class="col-sm-9">
+            <input type="number" class="form-control" placeholder="" name="rating" max="5" min="0">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="description" class="col-sm-3 col-form-label">詳細資料</label>
+          <div class="col-sm-9">
+            <textarea class="form-control" name="description"></textarea>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="image" class="col-sm-3 col-form-label">照片</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="" name="image">
+          </div>
+        </div>
+
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary">完成</button>
+          <a href="/" class="btn btn-outline-secondary">返回</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
