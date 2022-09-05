@@ -1,0 +1,13 @@
+<form action="/lists/{{ list._id }}/edit" method="POST">
+  <input type="text" placeholder="name" name="name" value="{{ list.name }}">
+  <input type="text" placeholder="name_en" name="name_en" value="{{ list.name.en }}">
+  <input type="text" placeholder="category" name="category" value="{{ list.category }}">
+  <input type="text" placeholder="image" name="image" value="{{ list.image }}">
+  <input type="text" placeholder="location" name="location" value="{{ list.location }}">
+  <input type="text" placeholder="phone" name="phone" value="{{ list.phone }}">
+  <input type="text" placeholder="google_map" name="google_map" value="{{ list.google_map }}">
+  <input type="number" placeholder="rating" name="rating" value="{{ list.rating }}">
+  <input type="text" placeholder="description" name="description" value="{{ list.description }}">
+  <button type="submit">Save</button>
+  <a href="/">back</a>
+</form>
