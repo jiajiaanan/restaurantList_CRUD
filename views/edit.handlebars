@@ -1,13 +1,79 @@
-<form action="/lists/{{ list._id }}/edit" method="POST">
-  <input type="text" placeholder="name" name="name" value="{{ list.name }}">
-  <input type="text" placeholder="name_en" name="name_en" value="{{ list.name.en }}">
-  <input type="text" placeholder="category" name="category" value="{{ list.category }}">
-  <input type="text" placeholder="image" name="image" value="{{ list.image }}">
-  <input type="text" placeholder="location" name="location" value="{{ list.location }}">
-  <input type="text" placeholder="phone" name="phone" value="{{ list.phone }}">
-  <input type="text" placeholder="google_map" name="google_map" value="{{ list.google_map }}">
-  <input type="number" placeholder="rating" name="rating" value="{{ list.rating }}">
-  <input type="text" placeholder="description" name="description" value="{{ list.description }}">
-  <button type="submit">Save</button>
-  <a href="/">back</a>
-</form>
+
+<div class="container">
+  <div class="card w-50 m-auto my-5">
+    <div class="card-body">
+      {{!-- form-start --}}
+      <form action="/lists/{{ list._id }}/edit" method="POST">
+        <div class="mb-3 row">
+          <label for="name" class="col-sm-3 col-form-label">餐廳名稱</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="name" value="{{ list.name }}">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="name_en" class="col-sm-3 col-form-label">餐廳英文名稱</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="name_en" value="{{ list.name_en }}">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="category" class="col-sm-3 col-form-label">類別</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="category" value="{{ list.category }}">
+          </div>
+        </div>
+
+
+        <div class="mb-3 row">
+          <label for="location" class="col-sm-3 col-form-label">地址</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="location" value="{{ list.location }}">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="google_map" class="col-sm-3 col-form-label">Google Map</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="google_map" value="{{ list.google_map }}">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="phone" class="col-sm-3 col-form-label">電話</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="phone" value="{{ list.phone }}">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="rating" class="col-sm-3 col-form-label">評分</label>
+          <div class="col-sm-9">
+            <input type="number" class="form-control" name="rating" max="5" min="0" value="{{ list.rating }}">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="description" class="col-sm-3 col-form-label">詳細資料</label>
+          <div class="col-sm-9">
+            <textarea class="form-control" rows="5" name="description">{{ list.description }}</textarea>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="image" class="col-sm-3 col-form-label">照片</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" name="image" value="{{ list.image }}">
+          </div>
+        </div>
+
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary">完成</button>
+          <a href="/" class="btn btn-outline-secondary">返回</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
